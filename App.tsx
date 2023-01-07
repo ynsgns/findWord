@@ -41,8 +41,6 @@ export default function App() {
   const onSelectRow = (index: number) => {
     let oldArr = selectedRow;
     oldArr.push(index);
-    console.log("oldArr", oldArr);
-
     setSelectedRow(selectedRow.concat(index));
   };
 
@@ -72,8 +70,8 @@ export default function App() {
         </TouchableOpacity>
       </View>
       {loading && <ActivityIndicator size="large" />}
-      {loopSize && <Text>loopSize : {loopSize}</Text>}
-      {loopTime && <Text>loopTime : {loopTime}</Text>}
+      {loopSize && <Text>loop size : {loopSize}</Text>}
+      {loopTime && <Text>loop time : {loopTime}</Text>}
       <View style={styles.resContainer}>
         {findedWord && (
           <FlatList
